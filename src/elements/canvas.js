@@ -28,6 +28,3 @@ export class SwdkCanvas extends LitElement {
     `;
   }
 }
-customElements.define('swdk-canvas', SwdkCanvas);
-
-module.exports = SwdkCanvas;

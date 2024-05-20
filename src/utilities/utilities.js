@@ -24,5 +24,3 @@ export class SwdkUtilities {
     return Object.assign({},obj,...defaults,obj)
   }
 }
-
-module.exports = SwdkUtilities;
