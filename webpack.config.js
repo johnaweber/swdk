@@ -9,8 +9,7 @@ module.exports = {
         libraryTarget: 'umd', // Universal Module Definition
         globalObject: 'this'
     },
-    mode: 'development',
-    devtool: 'eval',
+    mode: 'production',
     module: {
         rules: [
             {
