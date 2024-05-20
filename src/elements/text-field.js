@@ -20,4 +20,3 @@ export class SwimlaneTextField extends LitElement {
     `;
   }
 }
-customElements.define('swdk-text-field', SwimlaneTextField);
