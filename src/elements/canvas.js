@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import {repeat} from 'lit/directives/repeat.js';
-import { Utilities } from './utilities.js';
+import { SwdkUtilities } from '../utilities/utilities.js';
 
 /**
  * Canvas takes one input, contents, which must always be an array of JSON dict
@@ -15,7 +15,7 @@ import { Utilities } from './utilities.js';
  * back to JSON on the other end (line 26).
 */
 
-export class SwimlaneCanvas extends LitElement {
+export class SwdkCanvas extends LitElement {
   static properties = {
     contents: {},
   };
@@ -23,9 +23,11 @@ export class SwimlaneCanvas extends LitElement {
   render() {
     return html`
     <div class="swdk-canvas">
-      ${repeat(JSON.parse(this.contents), (obj)=>Utilities.generate(obj))}
+      ${repeat(JSON.parse(this.contents), (obj)=>SwdkUtilities.generate(obj))}
     </div>
     `;
   }
 }
-customElements.define('swdk-canvas', SwimlaneCanvas);
+customElements.define('swdk-canvas', SwdkCanvas);
+
+module.exports = SwdkCanvas;

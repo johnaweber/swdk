@@ -1,6 +1,6 @@
 
 import {html, unsafeStatic} from 'lit/static-html.js';
-import { SwimlaneTextField } from './elements/text-field.js';
+import { SwdkTextField } from '../elements/text-field.js';
 
 /**
 * generate() can certainly be turned into a massive switch/case, though
@@ -8,7 +8,7 @@ import { SwimlaneTextField } from './elements/text-field.js';
 * Canvas definitions.
 */
 
-export class Utilities {
+export class SwdkUtilities {
 
   static generate(definition) {
 
@@ -24,3 +24,5 @@ export class Utilities {
     return Object.assign({},obj,...defaults,obj)
   }
 }
+
+module.exports = SwdkUtilities;

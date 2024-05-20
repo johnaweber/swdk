@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { Utilities } from './utilities.js';
+import { SwdkUtilities } from '../utilities/utilities.js';
 
 export class SwimlaneTextField extends LitElement {
   static properties = {
@@ -12,7 +12,7 @@ export class SwimlaneTextField extends LitElement {
 
   render() {
 
-    const props = Utilities.setDefaults(JSON.parse(this.properties),this._defaults);
+    const props = SwdkUtilities.setDefaults(JSON.parse(this.properties),this._defaults);
 
     return html`
       <span>${props.title}</span><br>
