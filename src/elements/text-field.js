@@ -15,7 +15,7 @@ export class SwimlaneTextField extends LitElement {
     const props = SwdkUtilities.setDefaults(JSON.parse(this.properties),this._defaults);
 
     return html`
-      <span>${props.title}</span><br>
+      <span>${props.titles}</span><br>
       <input type="text">
     `;
   }
