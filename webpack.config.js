@@ -10,6 +10,9 @@ module.exports = {
         globalObject: 'this'
     },
     mode: 'production',
+    optimization: {
+        minimize: false // Ensure minification is disabled
+    },
     module: {
         rules: [
             {
