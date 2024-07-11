@@ -42,4 +42,6 @@ jobs:
         git checkout -B dist
         # Sync the dist directory with the root, delete files not present in dist
         rsync -av --delete dist/ .
-        git
+        git add .
+        git commit -m "Deploy to dist branch"
+        git push origin dist --force
