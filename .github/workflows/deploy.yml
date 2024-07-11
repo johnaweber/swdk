@@ -28,6 +28,9 @@ jobs:
     - name: Build Project
       run: yarn build
 
+    - name: Debug Build Output
+      run: ls -la dist
+
     - name: Deploy to dist Branch
       run: |
         git config --global user.name 'github-actions[bot]'
