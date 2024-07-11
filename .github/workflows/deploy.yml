@@ -40,10 +40,6 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
-        # Clean current files except .git and .github
-        find . -not -name '.git*' -not -path './.github*' -delete
-        # Copy build artifacts
-        cp -a dist/. .
-        git add .
-        git commit -m "Deploy to dist branch"
-        git push origin dist --force
+        # Sync the dist directory with the root, delete files not present in dist
+        rsync -av --delete dist/ .
+        git
