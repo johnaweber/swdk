@@ -40,6 +40,8 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
+        # Delete node_modules directory
+        rm -rf node_modules
         # Sync the dist directory with the root, delete files not present in dist
         rsync -av --delete dist/ .
         git add .
