@@ -49,6 +49,8 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
+        # Delete node_modules directory
+        rm -rf node_modules
         # Delete all files except .git and .github directories
         find . -not -name '.git*' -not -path './.github*' -delete
         # Debug: Ensure the temp_dist directory exists before copying
