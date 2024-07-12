@@ -52,6 +52,9 @@ jobs:
         # Remove the temporary directory
         rm -rf dist
         ls -la
+        cd $(pwd)
+        # Check git status
+        git status
         git add .
         git commit -m "Deploy to dist branch"
         git push origin dist --force
