@@ -40,6 +40,10 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
+        cd .git
+        ls -la
+        cd ..
+        ls-la
         # Delete node_modules directory
         rm -rf node_modules
         # Delete all files except .git and .github directories
@@ -52,9 +56,10 @@ jobs:
         # Remove the temporary directory
         rm -rf dist
         ls -la
-        cd $(pwd)
-        # Check git status
-        git status
+        cd .git
+        ls -la
+        cd ..
+        ls -la
         git add .
         git commit -m "Deploy to dist branch"
         git push origin dist --force
