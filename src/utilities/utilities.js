@@ -2,11 +2,7 @@
 import {html, unsafeStatic} from 'lit/static-html.js';
 import { SwdkTextField } from '../elements/text-field.js';
 
-/**
-* generate() can certainly be turned into a massive switch/case, though
-* IMHO we shouldn't do it unless we have a performance issue with large
-* Canvas definitions.
-*/
+
 
 export class SwdkUtilities {
 
