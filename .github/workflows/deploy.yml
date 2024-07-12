@@ -35,8 +35,6 @@ jobs:
       run: |
         # Create a temporary directory to store build files
         mkdir ../temp_dist
-        # Copy build files to the temporary directory
-        cp -r dist/* ../temp_dist
 
     - name: Deploy to dist Branch
       env:
@@ -47,14 +45,3 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
-        # Delete node_modules directory
-        rm -rf node_modules
-        # Delete all files except .git and .github directories
-        find . -not -name '.git*' -not -path './.github*' -delete
-        # Copy build files from the temporary directory to the root
-        cp -r ../temp_dist/* .
-        # Remove the temporary directory
-        rm -rf ../temp_dist
-        git add .
-        git commit -m "Deploy to dist branch"
-        git push origin dist --force
