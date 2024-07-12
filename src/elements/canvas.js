@@ -9,10 +9,6 @@ import { SwdkUtilities } from '../utilities/utilities.js';
  * rendered and their relative width. And just like the Swimlane App-Builder,
  * this can been further adjusted using the organizational components Section
  * and Tabs.
- * - As mentioned in my-implementation.js, LitElement attributes/properties
- * are primatives. They cannot be JSON objects. So passing JSON through one
- * attribute/property requires converting to String on one end, then parsing
- * back to JSON on the other end (line 26).
 */
 
 export class SwdkCanvas extends LitElement {
