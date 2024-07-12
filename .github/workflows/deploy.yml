@@ -49,10 +49,13 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin
         git checkout -B dist
+        ls -la
         rm -rf node_modules
         find . -not -name '.git*' -not -path './.github*' -not -path './.git*' -not -path './temp_dist*' -delete
+        ls -la
         cp -r temp_dist/* .
         rm -rf temp_dist
+        ls -la
         git add .
         git commit -m "Deploy to dist branch"
         git push origin dist --force
