@@ -3,7 +3,7 @@ import {repeat} from 'lit/directives/repeat.js';
 import { SwdkUtilities } from '../utilities/utilities.js';
 
 /**
- * 31
+ * 33
 */
 
 export class SwdkCanvas extends LitElement {

@@ -2,10 +2,6 @@
 import {html, unsafeStatic} from 'lit/static-html.js';
 import { SwdkTextField } from '../elements/text-field.js';
 
-/***
- * 27
-*/
-
 export class SwdkUtilities {
 
   static generate(definition) {

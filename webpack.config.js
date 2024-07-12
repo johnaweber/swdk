@@ -7,7 +7,7 @@ module.exports = {
         filename: 'swdk.js',
         library: 'SwimlaneWidgetDevKit',
         libraryTarget: 'umd', // Universal Module Definition
-        globalObject: 'this'
+        globalObject: 'typeof self !== \'undefined\' ? self : this'
     },
     mode: 'production',
     optimization: {
