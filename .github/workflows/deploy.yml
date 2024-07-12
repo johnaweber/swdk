@@ -34,8 +34,8 @@ jobs:
     - name: Prepare Dist Directory
       run: |
         # Create a temporary directory to store build files
-        mkdir ../temp_dist
-        cp -r dist/* ../temp_dist
+        mkdir temp_dist
+        cp -r dist/* temp_dist
         # Debug: List the contents of temp_dist
         ls -la temp_dist
 
@@ -50,4 +50,3 @@ jobs:
         git checkout -B dist
         # Delete node_modules directory
         rm -rf node_modules
-
