@@ -31,14 +31,6 @@ jobs:
     - name: Debug Build Output
       run: ls -la dist
 
-    - name: Prepare Dist Directory
-      run: |
-        # Create a temporary directory to store build files
-        mkdir temp_dist
-        cp -r dist/* temp_dist
-        # Debug: List the contents of temp_dist
-        ls -la temp_dist
-
     - name: Deploy to dist Branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,3 +44,12 @@ jobs:
         rm -rf node_modules
         # Debug: List the contents of the root directory
         ls -la
+        # Delete all files except .git and .github directories
+        find . -not -name '.git*' -not -path './dist' -delete
+        # Copy build files from the temporary directory to the root
+        cp -r dist/* .
+        # Remove the temporary directory
+        rm -rf dist
+        git add .
+        git commit -m "Deploy to dist branch"
+        git push origin dist --force
