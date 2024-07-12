@@ -50,9 +50,9 @@ jobs:
         git fetch origin
         git checkout -B dist
         rm -rf node_modules
-        find . -not -name '.git*' -not -path './.github*' -not -path './.git*' -not -path './dist*' -delete
-        cp -r dist/* .
-        rm -rf dist
+        find . -not -name '.git*' -not -path './.github*' -not -path './.git*' -not -path './temp_dist*' -delete
+        cp -r temp_dist/* .
+        rm -rf temp_dist
         git add .
         git commit -m "Deploy to dist branch"
         git push origin dist --force
