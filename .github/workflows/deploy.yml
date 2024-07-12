@@ -50,3 +50,5 @@ jobs:
         git checkout -B dist
         # Delete node_modules directory
         rm -rf node_modules
+        # Debug: List the contents of the root directory
+        ls -la
