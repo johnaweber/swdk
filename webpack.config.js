@@ -23,6 +23,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js']
-    },
-    devtool: 'eval-source-map' 
+    }
 };
