@@ -48,8 +48,10 @@ jobs:
         ls -la
         # Copy build files from the temporary directory to the root
         cp -r dist/* .
+        ls -la
         # Remove the temporary directory
         rm -rf dist
+        ls -la
         git add .
         git commit -m "Deploy to dist branch"
         git push origin dist --force
