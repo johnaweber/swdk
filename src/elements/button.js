@@ -446,5 +446,5 @@ export class Button extends SwimlaneElement {
 }
 
 if (!customElements.get('slit-button')) {
-  customElements.define('slit-button', SlitButton);
+  customElements.define('slit-button', Button);
 }
