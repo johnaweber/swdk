@@ -1,6 +1,6 @@
 import { SwimlaneElement, html, css } from '@swimlane/swimlane-element@2';
 
-class Button extends SwimlaneElement {
+export class Button extends SwimlaneElement {
     /*
     <slit-button 
         buttonAlignment=""
