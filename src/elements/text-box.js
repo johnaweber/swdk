@@ -1,6 +1,6 @@
 import { SwimlaneElement, html, css } from '@swimlane/swimlane-element@2';
 
-class Textbox extends SwimlaneElement {
+export class Textbox extends SwimlaneElement {
 
     /*
 
